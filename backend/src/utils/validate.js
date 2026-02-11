@@ -1,5 +1,8 @@
-export const categories = ["IT", "SAFETY", "FACILITIES", "OTHER"];
-export const severities = ["LOW", "MEDIUM", "HIGH"];
+import { ENUMS, TRANSITIONS } from "../../config.js";
+//export const categories = ["IT", "SAFETY", "FACILITIES", "OTHER"]; // add this to config
+//export const severities = ["LOW", "MEDIUM", "HIGH"]; // Add this to config
+const categories = ENUMS.CATAGORIES;
+const severities = ENUMS.SEVERITIES;
 
 export function validateCreateIncident(body) {
   const errors = [];
@@ -22,11 +25,12 @@ export function validateCreateIncident(body) {
 }
 
 export function validateStatusChange(current, next) {
-  const transitions = {
+  /*const transitions = {
     OPEN: ["INVESTIGATING"],
     INVESTIGATING: ["RESOLVED"],
     RESOLVED: []
-  };
+  }; //add this to config.js */
+  const transitions = TRANSITIONS;
 
   if (!transitions[current].includes(next)) {
     return { ok: false, error: "Invalid status transition" };

@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import ErrorBanner from "../../components/ErrorBanner";
 import { createIncident } from "../../services/api";
-
 const CATEGORIES = ["IT", "SAFETY", "FACILITIES", "OTHER"];
 const SEVERITIES = ["LOW", "MEDIUM", "HIGH"];
+
 
 export default function CreateIncident() {
   const router = useRouter();

@@ -6,6 +6,7 @@ import { listIncidents } from "../services/api";
 export default function Dashboard() {
   const [items, setItems] = useState([]);
   const [err, setErr] = useState("");
+  const [showArchived, setShowArchived] = useState(false);
   //  Create a state for the checkbox here like showArchived
 
   useEffect(() => {
@@ -29,8 +30,13 @@ export default function Dashboard() {
     const investigating = items.filter(x => x.status === "INVESTIGATING").length;
     const resolved = items.filter(x => x.status === "RESOLVED").length;
     const high = items.filter(x => x.severity === "HIGH").length;
-    return { total, open, investigating, resolved, high };
+    const archived = items.filter(x => x.status === "ARCHIVED").length;
+    return { total, open, investigating, resolved, high, archived };
   }, [items]);
+
+  const handleShowArchived = (e) => {
+    setShowArchived(e.target.checked)
+  }
 
   return (
     <Layout title="Dashboard">
@@ -41,7 +47,18 @@ export default function Dashboard() {
         <div className="kpi"><div className="kpi-label">Open</div><div className="kpi-value">{stats.open}</div></div>
         <div className="kpi"><div className="kpi-label">Investigating</div><div className="kpi-value">{stats.investigating}</div></div>
         <div className="kpi"><div className="kpi-label">Resolved</div><div className="kpi-value">{stats.resolved}</div></div>
+        {showArchived ? (<div className="kpi"><div className="kpi-label">Archived</div><div className="kpi-value">{stats.archived}</div></div>): <></>}
         <div className="kpi"><div className="kpi-label">High Severity</div><div className="kpi-value">{stats.high}</div></div>
+        
+        <div>
+          <label>
+            <input
+            type="checkbox"
+            checked={showArchived}
+            onChange={handleShowArchived}>
+            </input>
+          </label>
+        </div>
         {/*Then use conditional rendering to only display the archived rows if showArchived is true (Ternary operator?*/}
       </div>
 
@@ -50,6 +67,7 @@ export default function Dashboard() {
         <StatusColumn title="OPEN" items={items.filter(x => x.status === "OPEN")} />
         <StatusColumn title="INVESTIGATING" items={items.filter(x => x.status === "INVESTIGATING")} />
         <StatusColumn title="RESOLVED" items={items.filter(x => x.status === "RESOLVED")} />
+        {showArchived ? (<StatusColumn title="ARCHIVED" items={items.filter(x => x.status === "ARCHIVED")} />) : (<></>)}
       </div>
     </Layout>
   );

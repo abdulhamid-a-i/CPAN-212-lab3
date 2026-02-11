@@ -5,9 +5,9 @@ import ErrorBanner from "../../components/ErrorBanner";
 import { changeIncidentStatus, getIncident } from "../../services/api";
 
 const STATUS_FLOW = {
-  OPEN: ["INVESTIGATING"],
+  OPEN: ["INVESTIGATING", "ARCHIVED"],
   INVESTIGATING: ["RESOLVED"],
-  RESOLVED: []
+  RESOLVED: ["ARCHIVED"]
 };
 
 export default function IncidentDetails() {
