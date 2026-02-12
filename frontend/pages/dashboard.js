@@ -49,8 +49,8 @@ export default function Dashboard() {
         <div className="kpi"><div className="kpi-label">Resolved</div><div className="kpi-value">{stats.resolved}</div></div>
         {showArchived ? (<div className="kpi"><div className="kpi-label">Archived</div><div className="kpi-value">{stats.archived}</div></div>): <></>}
         <div className="kpi"><div className="kpi-label">High Severity</div><div className="kpi-value">{stats.high}</div></div>
-        
-        <div>
+      </div>
+      <div className="archivedCheckbox">
           <label>
             <input
             type="checkbox"
@@ -59,8 +59,6 @@ export default function Dashboard() {
             </input>
           </label>
         </div>
-        {/*Then use conditional rendering to only display the archived rows if showArchived is true (Ternary operator?*/}
-      </div>
 
       <div className="grid3">
         {/*This is what displays the actual incidents. So implement the conditional here as well.*/}

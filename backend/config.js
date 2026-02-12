@@ -6,12 +6,13 @@ const __dirname = path.dirname(__filename);
 
 export const PORT = process.env.PORT || 3001;
 
-export const STORAGE_MODE = "async";
+export const STORAGE_MODE = "sync";
 
-export const BACKEND_DIR = path.resolve(__dirname, "..");
+export const BACKEND_DIR = path.resolve(__dirname, ".");
 
 export const PATHS = {
-    DATA_DIR: path.join(BACKEND_DIR, "src","store","data")
+    DATA_DIR: path.join(BACKEND_DIR, "src","store","data"),
+    INCIDENTS_INDEX: path.join(BACKEND_DIR,"src","store","data","incidents.json")
 };
 
 export const LIMITS = {

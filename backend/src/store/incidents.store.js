@@ -1,16 +1,20 @@
 import { randomUUID } from "crypto";
+import { readIndex, writeIndex } from "../utils/fileStore.js";
 
-const incidents = []; //Replace with filepath to persistent storage.
+//const incidents = []; //Replace with filepath to persistent storage.
 
-export function listAll() {
-  return incidents; //replace with proper method to read file.
+export async function listAll() {
+  return await readIndex();
+  //return incidents; //replace with proper method to read file.
 }
 
-export function findById(id) {
-  return incidents.find(i => i.id === id); // replace with method to read file (will call listAll)
+export async function findById(id) {
+  const incidents = await readIndex();
+  return incidents.find(i => i.id === id) ?? null; // replace with method to read file (will call listAll)
 }
 
-export function createIncident(data) {
+export async function createIncident(data) {
+  const incidents = await readIndex();
   const incident = {
     id: randomUUID(),
     ...data,
@@ -18,14 +22,17 @@ export function createIncident(data) {
     reportedAt: new Date().toISOString()
   };
   incidents.push(incident);
+  await writeIndex(incidents);
   return incident;
   //Call write functions here
 }
 
-export function updateStatus(id, status) {
-  const incident = findById(id);
-  if (!incident) return null;
-  incident.status = status;
-  return incident;
+export async function updateStatus(id, status) {
+  const incidents = await readIndex();
+  if (!id < 0) return null;
+  const idx = incidents.findIndex((i) => i.id === id);
+  incidents[idx].status = status;
+  await writeIndex(incidents);
+  return incidents[idx];
   
 }
