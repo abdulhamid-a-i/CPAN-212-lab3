@@ -6,7 +6,7 @@ const __dirname = path.dirname(__filename);
 
 export const PORT = process.env.PORT || 3001;
 
-export const STORAGE_MODE = "sync";
+export const STORAGE_MODE = "async";
 
 export const BACKEND_DIR = path.resolve(__dirname, ".");
 
@@ -31,5 +31,3 @@ export const TRANSITIONS = {
     RESOLVED: ["ARCHIVED"],
     ARCHIVED:["OPEN"]
 };
-
-console.log(BACKEND_DIR)

@@ -3,13 +3,17 @@ import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import ErrorBanner from "../../components/ErrorBanner";
 import { changeIncidentStatus, getIncident } from "../../services/api";
+import { TRANSITIONS } from "../../config";
 
-const STATUS_FLOW = {
+/*const STATUS_FLOW = {
   OPEN: ["INVESTIGATING", "ARCHIVED"],
   INVESTIGATING: ["RESOLVED"],
   RESOLVED: ["ARCHIVED"],
   ARCHIVED: ["OPEN"]
-};
+};*/
+
+const STATUS_FLOW = TRANSITIONS;
+
 
 export default function IncidentDetails() {
   const router = useRouter();

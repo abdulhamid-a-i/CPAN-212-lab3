@@ -3,8 +3,11 @@ import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import ErrorBanner from "../../components/ErrorBanner";
 import { createIncident } from "../../services/api";
-const CATEGORIES = ["IT", "SAFETY", "FACILITIES", "OTHER"];
-const SEVERITIES = ["LOW", "MEDIUM", "HIGH"];
+import { ENUMS } from "../../config";
+//const CATEGORIES = ["IT", "SAFETY", "FACILITIES", "OTHER"];
+//const SEVERITIES = ["LOW", "MEDIUM", "HIGH"];
+const CATEGORIES = ENUMS.CATAGORIES;
+const SEVERITIES = ENUMS.SEVERITIES;
 
 
 export default function CreateIncident() {

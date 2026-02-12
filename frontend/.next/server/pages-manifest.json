@@ -3,8 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/incidents/[id]": "pages/incidents/[id].js",
-  "/dashboard": "pages/dashboard.js",
   "/incidents": "pages/incidents.js",
-  "/incidents/create": "pages/incidents/create.js",
+  "/dashboard": "pages/dashboard.js",
   "/bulk-upload": "pages/bulk-upload.js"
 }

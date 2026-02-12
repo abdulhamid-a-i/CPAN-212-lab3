@@ -10,7 +10,7 @@ export async function listAll() {
 
 export async function findById(id) {
   const incidents = await readIndex();
-  return incidents.find(i => i.id === id) ?? null; // replace with method to read file (will call listAll)
+  return incidents.find(i => i.id === id) ?? null;
 }
 
 export async function createIncident(data) {
