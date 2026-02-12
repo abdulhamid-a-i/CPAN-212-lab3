@@ -19,7 +19,7 @@ export function createIncident(data) {
   };
   incidents.push(incident);
   return incident;
-  //Implement fs here?
+  //Call write functions here
 }
 
 export function updateStatus(id, status) {
@@ -27,5 +27,5 @@ export function updateStatus(id, status) {
   if (!incident) return null;
   incident.status = status;
   return incident;
-  // Implement fs here?
+  
 }

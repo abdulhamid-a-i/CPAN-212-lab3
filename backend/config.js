@@ -11,7 +11,7 @@ export const STORAGE_MODE = "async";
 export const BACKEND_DIR = path.resolve(__dirname, "..");
 
 export const PATHS = {
-    DATA_DIR: path.join(BACKEND_DIR, "src","store",'incidents.json')
+    DATA_DIR: path.join(BACKEND_DIR, "src","store","data")
 };
 
 export const LIMITS = {

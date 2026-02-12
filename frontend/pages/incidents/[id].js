@@ -7,7 +7,8 @@ import { changeIncidentStatus, getIncident } from "../../services/api";
 const STATUS_FLOW = {
   OPEN: ["INVESTIGATING", "ARCHIVED"],
   INVESTIGATING: ["RESOLVED"],
-  RESOLVED: ["ARCHIVED"]
+  RESOLVED: ["ARCHIVED"],
+  ARCHIVED: ["OPEN"]
 };
 
 export default function IncidentDetails() {
