@@ -34,5 +34,41 @@
     "severity": "MEDIUM",
     "status": "OPEN",
     "reportedAt": "2026-02-12T20:36:23.275Z"
+  },
+  {
+    "id": "ecdb19a9-6040-4a8c-a0e6-382cd86eb7de",
+    "title": "Printer outage",
+    "description": "Shipping label printer is offline",
+    "category": "IT",
+    "severity": "LOW",
+    "status": "OPEN",
+    "reportedAt": "2026-02-12T21:11:42.920Z"
+  },
+  {
+    "id": "b7cf9432-af33-44af-b83e-76cfdc372de8",
+    "title": "Oil spill near press",
+    "description": "Small oil spill observed near Press A",
+    "category": "SAFETY",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "reportedAt": "2026-02-13T04:28:52.345Z"
+  },
+  {
+    "id": "9205d2c9-c351-45f2-91e5-0f2218d95982",
+    "title": "Printer outage",
+    "description": "Shipping label printer is offline",
+    "category": "IT",
+    "severity": "LOW",
+    "status": "OPEN",
+    "reportedAt": "2026-02-13T04:28:52.348Z"
+  },
+  {
+    "id": "6129f945-9505-4066-bddb-b8663f261fa5",
+    "title": "test incident",
+    "description": "testing adding incidents.",
+    "category": "IT",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "reportedAt": "2026-02-13T04:29:20.081Z"
   }
 ]

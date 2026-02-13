@@ -1,10 +1,9 @@
 import { ENUMS, TRANSITIONS } from "../../config.js";
-//export const categories = ["IT", "SAFETY", "FACILITIES", "OTHER"]; // add this to config
-//export const severities = ["LOW", "MEDIUM", "HIGH"]; // Add this to config
-const categories = ENUMS.CATAGORIES;
-const severities = ENUMS.SEVERITIES;
+
 
 export function validateCreateIncident(body) {
+  const categories = ENUMS.CATAGORIES;
+  const severities = ENUMS.SEVERITIES;
   const errors = [];
 
   if (!body.title || body.title.length < 5) errors.push("Invalid title");
@@ -25,11 +24,6 @@ export function validateCreateIncident(body) {
 }
 
 export function validateStatusChange(current, next) {
-  /*const transitions = {
-    OPEN: ["INVESTIGATING"],
-    INVESTIGATING: ["RESOLVED"],
-    RESOLVED: []
-  }; //add this to config.js */
   const transitions = TRANSITIONS;
 
   if (!transitions[current].includes(next)) {

@@ -29,7 +29,7 @@ export async function createIncident(data) {
 
 export async function updateStatus(id, status) {
   const incidents = await readIndex();
-  if (!id < 0) return null;
+  if (id < 0) return null;
   const idx = incidents.findIndex((i) => i.id === id);
   incidents[idx].status = status;
   await writeIndex(incidents);

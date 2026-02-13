@@ -1,4 +1,6 @@
-const BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3001";
+import { API_BASE_URL } from "../config";
+
+const BASE = process.env.NEXT_PUBLIC_API_BASE_URL || API_BASE_URL;
 
 async function handleJson(res) {
   const contentType = res.headers.get("content-type") || "";

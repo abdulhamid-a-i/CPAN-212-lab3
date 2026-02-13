@@ -5,6 +5,7 @@ import { listAll, findById, createIncident, updateStatus } from "../store/incide
 import { parseCsvBuffer } from "../utils/csv.js";
 import { validateCreateIncident, validateStatusChange } from "../utils/validate.js";
 
+
 const router = express.Router();
 
 const upload = multer({ storage: multer.memoryStorage() });
@@ -55,16 +56,6 @@ router.post("/bulk-upload", upload.single("file"), async (req, res) => {
     await createIncident(result.value);
     created++;
   }
-
-  /*records.forEach(row => {
-    const result = validateCreateIncident(row);
-    if (!result.ok) {
-      skipped++;
-      return;
-    }
-    createIncident(result.value);
-    created++;
-  });*/
 
   res.json({
     totalRows: records.length,

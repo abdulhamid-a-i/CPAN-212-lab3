@@ -5,13 +5,6 @@ import ErrorBanner from "../../components/ErrorBanner";
 import { changeIncidentStatus, getIncident } from "../../services/api";
 import { TRANSITIONS } from "../../config";
 
-/*const STATUS_FLOW = {
-  OPEN: ["INVESTIGATING", "ARCHIVED"],
-  INVESTIGATING: ["RESOLVED"],
-  RESOLVED: ["ARCHIVED"],
-  ARCHIVED: ["OPEN"]
-};*/
-
 const STATUS_FLOW = TRANSITIONS;
 
 

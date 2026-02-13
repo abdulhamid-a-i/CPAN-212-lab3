@@ -1,1 +1,0 @@
-{"c":["pages/incidents/[id]","webpack"],"r":[],"m":["../backend/config.js","./node_modules/next/dist/build/polyfills/process.js","./node_modules/next/dist/compiled/native-url/index.js","./node_modules/next/dist/compiled/path-browserify/index.js","./node_modules/next/dist/compiled/process/browser.js","./node_modules/next/dist/compiled/querystring-es3/index.js"]}
