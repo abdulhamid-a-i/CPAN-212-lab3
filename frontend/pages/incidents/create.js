@@ -4,8 +4,7 @@ import Layout from "../../components/Layout";
 import ErrorBanner from "../../components/ErrorBanner";
 import { createIncident } from "../../services/api";
 import { ENUMS } from "../../config";
-//const CATEGORIES = ["IT", "SAFETY", "FACILITIES", "OTHER"];
-//const SEVERITIES = ["LOW", "MEDIUM", "HIGH"];
+
 const CATEGORIES = ENUMS.CATAGORIES;
 const SEVERITIES = ENUMS.SEVERITIES;
 

@@ -20,10 +20,7 @@ export default function Dashboard() {
       }
     })();
   }, []);
-  // This might be where I implement the filering for archived files
-  // Then add code here to filter the total items with archived and return
-  // { total, open, investigating, resolved, high} if checkbox NOT checked
-  // and { total, open, investigating, resolved, high, archived} if checkbox is checked
+
   const stats = useMemo(() => {
     const total = items.length;
     const open = items.filter(x => x.status === "OPEN").length;
@@ -57,11 +54,11 @@ export default function Dashboard() {
             checked={showArchived}
             onChange={handleShowArchived}>
             </input>
+            Show archived incidents
           </label>
         </div>
 
       <div className="grid3">
-        {/*This is what displays the actual incidents. So implement the conditional here as well.*/}
         <StatusColumn title="OPEN" items={items.filter(x => x.status === "OPEN")} />
         <StatusColumn title="INVESTIGATING" items={items.filter(x => x.status === "INVESTIGATING")} />
         <StatusColumn title="RESOLVED" items={items.filter(x => x.status === "RESOLVED")} />

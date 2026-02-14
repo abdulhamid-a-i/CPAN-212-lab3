@@ -9,11 +9,6 @@ self.__BUILD_MANIFEST = {
   "lowPriorityFiles": [],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -24,30 +19,10 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/bulk-upload": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/bulk-upload.js"
-    ],
     "/dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/dashboard.js"
-    ],
-    "/incidents": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/incidents.js"
-    ],
-    "/incidents/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/incidents/[id].js"
-    ],
-    "/incidents/create": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/incidents/create.js"
     ]
   },
   "ampFirstPages": []
