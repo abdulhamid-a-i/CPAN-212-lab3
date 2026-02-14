@@ -5,7 +5,7 @@
     "description": "Small oil spill observed near Press A",
     "category": "SAFETY",
     "severity": "MEDIUM",
-    "status": "OPEN",
+    "status": "ARCHIVED",
     "reportedAt": "2026-02-12T20:36:23.269Z"
   },
   {
@@ -23,7 +23,7 @@
     "description": "Guard rail at line entrance is loose",
     "category": "SAFETY",
     "severity": "HIGH",
-    "status": "OPEN",
+    "status": "RESOLVED",
     "reportedAt": "2026-02-12T20:36:23.273Z"
   },
   {
@@ -32,7 +32,7 @@
     "description": "Handheld scanner latency causing delays",
     "category": "IT",
     "severity": "MEDIUM",
-    "status": "OPEN",
+    "status": "RESOLVED",
     "reportedAt": "2026-02-12T20:36:23.275Z"
   },
   {
@@ -50,7 +50,7 @@
     "description": "Small oil spill observed near Press A",
     "category": "SAFETY",
     "severity": "MEDIUM",
-    "status": "OPEN",
+    "status": "INVESTIGATING",
     "reportedAt": "2026-02-13T04:28:52.345Z"
   },
   {
@@ -68,7 +68,34 @@
     "description": "testing adding incidents.",
     "category": "IT",
     "severity": "HIGH",
-    "status": "OPEN",
+    "status": "INVESTIGATING",
     "reportedAt": "2026-02-13T04:29:20.081Z"
+  },
+  {
+    "id": "6247fda0-b46f-459c-9cb7-ae1c391ee5a9",
+    "title": "Oil spill near press",
+    "description": "Small oil spill observed near Press A",
+    "category": "SAFETY",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "reportedAt": "2026-02-14T00:11:23.278Z"
+  },
+  {
+    "id": "c10f2412-7b6a-4a4d-94e7-fb9d3e83e1d2",
+    "title": "Printer outage",
+    "description": "Shipping label printer is offline",
+    "category": "IT",
+    "severity": "LOW",
+    "status": "OPEN",
+    "reportedAt": "2026-02-14T00:11:23.284Z"
+  },
+  {
+    "id": "a6ed4f30-83c7-40d8-aff3-fad8a10fba26",
+    "title": "test 2",
+    "description": "testing further",
+    "category": "OTHER",
+    "severity": "LOW",
+    "status": "ARCHIVED",
+    "reportedAt": "2026-02-14T00:14:18.813Z"
   }
 ]
